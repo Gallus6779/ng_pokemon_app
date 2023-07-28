@@ -1,0 +1,20 @@
+<h1>Liste des pokemons</h1>
+
+<input
+
+#input
+(keyup.enter)="selectPokemon(input.value)"
+type="number"
+/>
+
+<p *ngIf="pokemonSelected">
+Vous avez selectionner le pokemon : {{ pokemonSelected?.name }}
+</p>
+
+<p *ngIf="!pokemonSelected">
+Aucun pokemon n'a ete trouve pour le moment.
+</p>
+
+<p *ngFor="let pokemon of pokemonList">
+    {{ pokemon }} - {{ pokemon.name }} 
+</p>
